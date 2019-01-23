@@ -42,20 +42,50 @@ select last_name, count(*) as count
 from actor 
 group by last_name;
 
--- 4b. List last names of actors and the number of actors who have that last name, but only for names that are shared by at least two actors
+-- NOT DONE YET 4b. List last names of actors and the number of actors who have that last name, but only for names that are shared by at least two actors
 select last_name, count(*) as countname 
 from actor 
 where countname >= 2
 group by last_name;
 
 -- 4c. The actor HARPO WILLIAMS was accidentally entered in the actor table as GROUCHO WILLIAMS. Write a query to fix the record.
+update actor
+set first_name = "HARPO"
+where first_name = "GROUCHO" AND last_name = "WILLIAMS";
+
+select * 
+from actor
+where first_name = "HARPO";
+
 -- 4d. Perhaps we were too hasty in changing GROUCHO to HARPO. It turns out that GROUCHO was the correct name after all! In a single query, if the first name of the actor is currently HARPO, change it to GROUCHO.
+update actor
+set first_name = "GROUCHO"
+where first_name = "HARPO";
 
 -- 5a. You cannot locate the schema of the address table. Which query would you use to re-create it?
+show create table address;
 
 -- 6a. Use JOIN to display the first and last names, as well as the address, of each staff member. Use the tables staff and address:
--- 6b. Use JOIN to display the total amount rung up by each staff member in August of 2005. Use tables staff and payment.
--- 6c. List each film and the number of actors who are listed for that film. Use tables film_actor and film. Use inner join.
+select * from staff;
+select * from address;
+
+select staff.first_name, staff.last_name, address.address, address.address2, address.city_id, address.postal_code
+from staff
+join address on staff.address_id=address.address_id;
+
+-- NOT DONE YET 6b. Use JOIN to display the total amount rung up by each staff member in August of 2005. Use tables staff and payment.
+select * from staff;
+select * from payment;
+
+
+-- NOT DONE YET 6c. List each film and the number of actors who are listed for that film. Use tables film_actor and film. Use inner join.
+select * from film_actor;
+select * from film;
+
+select film.title, film_actor.actor_id count(*) as actorsinfilm
+from film
+inner join film_actor on film.film_id=film_actor.film_id;
+
 -- 6d. How many copies of the film Hunchback Impossible exist in the inventory system?
 -- 6e. Using the tables payment and customer and the JOIN command, list the total paid by each customer. List the customers alphabetically by last name:
 -- 7a. The music of Queen and Kris Kristofferson have seen an unlikely resurgence. As an unintended consequence, films starting with the letters K and Q have also soared in popularity. Use subqueries to display the titles of movies starting with the letters K and Q whose language is English.
