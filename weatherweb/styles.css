@@ -1,0 +1,41 @@
+.box {
+    padding: 20px;
+    color: #fff;
+    background: deepskyblue;
+  }
+  
+  .margin-top-80 {
+    margin-top: 80px;
+  }
+  
+  h1 {
+    font-size: 6em;
+    color: rgb(20, 120, 145);
+    text-align: center;
+  }
+
+  
+
+  h3 {
+      color: rgb(52, 67, 117);
+      text-align: center;
+      font-size: 3em;
+      font-style: italic;
+  }
+
+  .img_1 {
+      box-align: center;
+      margin-left: 450px;
+      margin-right: 450px;
+      padding: 20px;
+
+      }
+.caption {
+    text-align: center;
+}
+
+.subpage {
+    text-align: center;
+    color: rgb(20, 120, 145);
+    font-size: 4em
+}
