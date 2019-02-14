@@ -14,8 +14,28 @@
     text-align: center;
   }
 
-  
+  .front-page {
+      text-align: center;
+      margin-left: 75px;
+      margin-right: 75px;
+  }
 
+  .data-page {
+      text-align: center;
+  }
+
+  .comp-page {
+      text-align: center;
+  }
+
+  #data {
+      padding: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border: 2px solid rgb(97, 97, 121)
+  }
+
+  
   h3 {
       color: rgb(52, 67, 117);
       text-align: center;
@@ -24,12 +44,12 @@
   }
 
   .img_1 {
-      box-align: center;
-      margin-left: 450px;
-      margin-right: 450px;
-      padding: 20px;
+      padding: 10px;
+      border: 2px solid;
+      background-color: rgb(89, 131, 180);
+  }
 
-      }
+      
 .caption {
     text-align: center;
 }
@@ -38,4 +58,14 @@
     text-align: center;
     color: rgb(20, 120, 145);
     font-size: 4em
+}
+
+.row {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 20px;
+}
+
+.exp {
+    margin-top: 75px;
 }

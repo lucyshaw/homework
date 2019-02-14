@@ -20,7 +20,7 @@
                 </button>
             <a class="navbar-brand" href="index.html">Home</a>
             </div>
-                  <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
@@ -35,46 +35,60 @@
                       <li><a href="comp_page.html">Comparison</a></li>
                       <li><a href="data_page.html">Data</a></li>
                     </ul>
-                  </div>
                 </div>
-              </nav>
+        </div>
+    </nav>
     <h1>Weather Analysis</h1>
-        <p>The purpose of this project was to query a weather API to find trends in temperature, humidity, cloudiness and wind speed from 
-        cities around the world at the time of the query. 
+    <br>
+        <p class='front-page'>The purpose of this project was to query a weather API to find trends in temperature, humidity, cloudiness and wind speed from 
+        cities around the world at the time of the query. The query randomly selected over 500 latitudes and longitudes and then
+        found the closes city to those coordinates. From there, data was retrieved for the current temperature, humidity,
+        windspeed and cloudiness for that city. Matplotlib was used to create plots of each different type of weather phenomenon.
+        This site contains the plots as well as the data that
+        was created as a result of the query. Please click on one of the thumbnails below to see the detail for each weather type.
         </p>
+    <br>
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src='images/latvclouds.png' alt='Clouds Map'>
-                      <div class="caption">
-                        <h4>Latitude vs. Cloudiness</h4>
-                      </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src='images/latvhumidity.png' alt='Humidity Map'>
-                    <div class="caption">
-                        <h4>Latitude vs. Humidity</h4>
+                <a id='clouds' href="clouds_page.html">
+                    <div class="thumbnail">
+                        <img src='images/latvclouds.png' alt='Clouds Map'>
+                        <div class="caption">
+                            <h4>Latitude vs. Cloudiness</h4>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src='images/latvtemp.png' alt='Temperature Map'>
-                    <div class="caption">
-                        <h4>Latitude vs. Temperature</h4>
+                <a id='humidity' href="humidity_page.html">
+                    <div class="thumbnail">
+                        <img src='images/latvhumidity.png' alt='Humidity Map'>
+                        <div class="caption">
+                            <h4>Latitude vs. Humidity</h4>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-md-3">
+               <a id="temp" href="temp_page.html">
+                    <div class="thumbnail">     
+                        <img src='images/latvtemp.png' alt='Temperature Map'>
+                        <div class="caption">
+                            <h4>Latitude vs. Temperature</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a id='wind' href="wind_page.html">
                     <div class="thumbnail">
                         <img src='images/latvwind.png' alt='Wind Speed Map'>
-                          <div class="caption">
+                        <div class="caption">
                             <h4>Latitude vs. Wind</h4>
-                          </div>
+                        </div>
                     </div>
+                </a>
             </div>
         </div>
     </div>
