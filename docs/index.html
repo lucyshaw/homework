@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Trend Visualization</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+                              <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a id="temp" href="temp_page.html">Max Temp</a></li>
+                                <li><a id='humidity' href="humidity_page.html">Humidity</a></li>
+                                <li><a id='clouds' href="clouds_page.html">Cloudiness</a></li>
+                                <li><a id='wind' href="wind_page.html">Wind Speed</a></li>
+                              </ul>
+                      <li><a href="comp_page.html">Comparison</a></li>
+                      <li><a href="data_page.html">Data</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <h1>Weather Analysis</h1>
+    <br>
+        <p class='front-page'>The purpose of this project was to query a weather API to find trends in temperature, humidity, cloudiness and wind speed from 
+        cities around the world at the time of the query. The query randomly selected over 500 latitudes and longitudes and then
+        found the closes city to those coordinates. From there, data was retrieved for the current temperature, humidity,
+        windspeed and cloudiness for that city. Matplotlib was used to create plots of each different type of weather phenomenon.
+        This site contains the plots as well as the data that
+        was created as a result of the query. Please click on one of the thumbnails below to see the detail for each weather type.
+        </p>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a id='clouds' href="clouds_page.html">
+                    <div class="thumbnail">
+                        <img src='images/latvclouds.png' alt='Clouds Map'>
+                        <div class="caption">
+                            <h4>Latitude vs. Cloudiness</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a id='humidity' href="humidity_page.html">
+                    <div class="thumbnail">
+                        <img src='images/latvhumidity.png' alt='Humidity Map'>
+                        <div class="caption">
+                            <h4>Latitude vs. Humidity</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+               <a id="temp" href="temp_page.html">
+                    <div class="thumbnail">     
+                        <img src='images/latvtemp.png' alt='Temperature Map'>
+                        <div class="caption">
+                            <h4>Latitude vs. Temperature</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a id='wind' href="wind_page.html">
+                    <div class="thumbnail">
+                        <img src='images/latvwind.png' alt='Wind Speed Map'>
+                        <div class="caption">
+                            <h4>Latitude vs. Wind</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</body>
