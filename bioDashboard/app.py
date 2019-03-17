@@ -12,6 +12,7 @@ from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+application = app
 
 
 #################################################
@@ -98,6 +99,6 @@ def samples(sample):
 
 
 if __name__ == "__main__":
-    import os 
+
     port = int(os.environ.get('PORT', 5000))
     app.run(port=port)
